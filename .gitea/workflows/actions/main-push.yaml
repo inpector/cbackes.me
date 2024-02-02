@@ -11,12 +11,14 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: copy file via ssh password
+      - name: Rename src
+        run: cp -a src httpdocs
+      - name: copy dir via ssh
         uses: appleboy/scp-action@master
         with:
           host: "188.68.47.208"
           username: hosting126902
           key: ${{ secrets.NETCUP }}
           port: "22"
-          source: "src/*"
-          target: "cbackes.me/httpdocs"
+          source: "httpdocs"
+          target: "cbackes.me"
