@@ -1,0 +1,22 @@
+name: Push to Netcup
+run-name: pushes the vcard to netcup test
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  Explore-Gitea-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: "188.68.47.208"
+          username: hosting126902
+          key: ${{ secrets.NETCUP }}
+          port: "22"
+          source: "src"
+          target: "cbackes.me/httpdocs/test"
