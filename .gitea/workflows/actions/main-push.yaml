@@ -1,5 +1,5 @@
 name: Push to Netcup
-run-name: pushes the vcard to netcup test
+run-name: pushes the vcard to netcup prod
 on:
   push:
     branches:
@@ -18,5 +18,5 @@ jobs:
           username: hosting126902
           key: ${{ secrets.NETCUP }}
           port: "22"
-          source: "src"
-          target: "cbackes.me/src"
+          source: "src/*"
+          target: "cbackes.me/httpdocs"
