@@ -22,3 +22,4 @@ jobs:
           port: "22"
           source: "httpdocs"
           target: "cbackes.me"
+          rm: true
