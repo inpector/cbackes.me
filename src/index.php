@@ -1,10 +1,7 @@
 <?php
-
-$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2); 
-
-if ($lang == "de") {
-    include index.html;
-} else {
-    include index_en.html;
-}
+switch (substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2))
+{
+    case 'de': include "content.html"; break;     
+    default:   include "content_en.html"; break; # English
+} 
 ?>
