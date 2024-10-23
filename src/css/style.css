@@ -19,6 +19,8 @@ details.w3-codespan {
 .public-keys details > p {
     opacity: 0;
     transition: sweep 0.25s ease-out;
+    overflow-wrap: break-all; 
+    word-break: break-all;
 }
 
 .public-keys details[open] > p {
