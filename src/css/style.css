@@ -16,15 +16,22 @@ details.w3-codespan {
     cursor: pointer;
 }
 
-details[open] summary~* {
-    animation: sweep 1s ease-in-out;
+.public-keys details > p {
+    opacity: 0;
+    transition: sweep 0.25s ease-out;
+}
+
+.public-keys details[open] > p {
+    opacity: 1;
+    animation: sweep 0.25s ease-in;
+
 }
 
 
 @keyframes sweep {
     0% {
         opacity: 0;
-        margin-left: -10px
+        /* margin-left: -10px */
     }
 
     100% {
@@ -33,10 +40,16 @@ details[open] summary~* {
     }
 }
 
-.w3-codespan{background-color:#f4f4f4 }
+.w3-codespan{
+    background-color:#f4f4f4 
+}
 
 h1 {
   background-color: rgba(61, 61, 61, 0.466);
   padding: 0 15px;
   width: 100%;
+}
+
+h3 {
+    font-size:18px; 
 }
