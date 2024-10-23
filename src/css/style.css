@@ -24,24 +24,23 @@ h3 {
 
 /* W3 Adjustments */
 .w3-codespan {
-  background-color: #f4f4f4
+  background-color: #f4f4f4;
 }
 
 details.w3-codespan {
   cursor: pointer;
 }
 
-.cbme-container-public-keys details>p {
+.cbme-container-public-keys details > p {
   opacity: 0;
   transition: sweep 0.25s ease-out;
   overflow-wrap: break-all;
   word-break: break-all;
 }
 
-.cbme-container-public-keys details[open]>p {
+.cbme-container-public-keys details[open] > p {
   opacity: 1;
   animation: sweep 0.25s ease-in;
-
 }
 
 @keyframes sweep {
@@ -52,7 +51,7 @@ details.w3-codespan {
 
   100% {
     opacity: 1;
-    margin-left: 0px
+    margin-left: 0px;
   }
 }
 
